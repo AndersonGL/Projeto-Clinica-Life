@@ -1,2 +1,7 @@
-# Projeto-Clinica-Life
- Pagina Web Responsiva Clinica Médica: CSS responsivo da página
+* Projeto de site Estático e responsivo clínica life utilizando:
+
+* HTML
+* CSS
+* VSCODE
+
+
