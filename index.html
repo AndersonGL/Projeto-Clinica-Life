@@ -1,87 +1,131 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-
+<!doctype html>
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/estilo.css">
-  <link
-    href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap"
-    rel="stylesheet">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>CMLife - Home</title>
-</head>
+  <meta name="description" content="Clínica Médica Life — multiespecialidades em São Paulo. Agende consultas pelo WhatsApp." />
 
+  <!-- Critical / minimal CSS can be inlined for faster first paint, here we link external -->
+  <link rel="stylesheet" href="css/estilo.css">
+  <link rel="preload" href="assets/logo.png" as="image">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
 <body>
   <header class="topo">
-    <div class="container">
-      <div class="topo-titulo">
-        <a href="index.html">
-          <img class="topo-logo" src="assets/logo.png" alt="Clínica Médica" title="Clínica Médica Life">
-        </a>
-      </div>
+    <div class="container topo-inner">
+      <a class="logo-link" href="index.html" aria-label="CMLife - Home">
+        <img src="assets/logo.png" width="160" height="48" alt="Clínica Médica Life" class="logo">
+      </a>
 
-      <nav class="topo-links">
+      <nav class="topo-links" aria-label="menu principal">
         <a href="#sobre">Sobre</a>
         <a href="especialidades.html">Especialidades</a>
         <a href="#contato">Contato</a>
-
       </nav>
     </div>
   </header>
 
   <main>
-    <section class="box-visao-geral">
-      <div class="box-visao-geral-titulo container">
-        <h1>Clínica Médica Life<br> Aqui a gente cuida de você</h1>
+    <section class="hero">
+      <div class="container">
+        <h1>Clínica Médica Life<br><span class="accent">Aqui a gente cuida de você</span></h1>
       </div>
     </section>
 
     <section id="sobre" class="secao-sobre container">
-      <div class="container-conteudo">
-        <h2>Sobre a clínica</h2>
-        <p>Nossa clínica está pronta para receber nossos pacientes através de uma excelente estrutura, comodidade e com
-          a segurança de que você precisam.</p>
-      </div>
-
-      <div class="box-sobre">
-        <img src="assets/medico.jpg" alt="Imagem de um médico" title="Imagem de um médico">
-
+      <div class="sobre-grid">
         <div>
-          <h3>Aqui na nossa clínica você vai encontrar:</h3>
+          <h2>Sobre a clínica</h2>
+          <p>Nossa clínica está pronta para receber pacientes com estrutura, comodidade e segurança.</p>
           <ul>
-            <li>Horário flexível. Atendemos de segunda à sábado.</li>
-            <li>Estacionamento amplo com 600 vagas.</li>
-            <li>Sala de espera com TV e Wifi.</li>
-            <li>Agendamento pelo telefone ou WhatsApp.</li>
-            <li>Excelente localização.</li>
-            <li>Entrega de exames em sua residência</li>
+            <li>Atendimento de segunda à sábado</li>
+            <li>Estacionamento amplo</li>
+            <li>Agendamento por WhatsApp</li>
           </ul>
         </div>
+
+        <figure class="foto-medico">
+          <img src="assets/medico.jpg"
+               alt="Imagem de um médico"
+               class="lazy"
+               loading="lazy">
+        </figure>
       </div>
     </section>
 
     <section id="especialidades" class="secao-especialidades container">
-      <div class="container-conteudo">
+      <div class="section-header">
         <h3>Uma clínica de multiespecialidade</h3>
-        <p>Nossa clínica possui diversas especialidades. Como ortopedia, pediatra, geriatria, psicologia, fisioterapia e
-          outros.</p>
+        <p>Ortopedia, Pediatria, Geriatria, Psicologia, Fisioterapia e muito mais.</p>
       </div>
 
-      <div class="box-especialidades">
-        <figure class="box-especialidade">
-          <img src="assets/ortopedia1.png" alt="Imagem de um ortopedista" title="Imagem de um ortopedista">
-          <figcaption>Ortopedia</figcaption>
-        </figure>
+      <div class="grid-especialidades">
+        <div class="card-especialidade">
+          <img src="assets/ortopedia.png" alt="Ortopedia" class="lazy" loading="lazy">
+          <h4>Ortopedia</h4>
+          <p>Tratamento das doenças e lesões dos ossos, músculos, ligamentos e articulações.</p>
+          <ul class="especialidade-detalhes">
+            <li>Traumatologia</li>
+            <li>Artroscopia</li>
+            <li>Reabilitação</li>
+          </ul>
+        </div>
 
-        <figure class="box-especialidade">
-          <img src="assets/pediatra.png" alt="Imagem de uma pediatra" title="Imagem de uma pediatra">
-          <figcaption>Pediatria</figcaption>
-        </figure>
+        <div class="card-especialidade">
+          <img src="assets/pediatra.png" alt="Pediatria" class="lazy" loading="lazy">
+          <h4>Pediatria</h4>
+          <p>Cuidados especializados para bebês, crianças e adolescentes, com foco no desenvolvimento saudável.</p>
+          <ul class="especialidade-detalhes">
+            <li>Vacinação</li>
+            <li>Check-up infantil</li>
+            <li>Desenvolvimento</li>
+          </ul>
+        </div>
 
-        <figure class="box-especialidade">
-          <img src="assets/geriatra.png" alt="Imagem de uma geriatra" title="Imagem de uma geriatra">
-          <figcaption>Geriatria</figcaption>
-        </figure>
+        <div class="card-especialidade">
+          <img src="assets/geriatra.png" alt="Geriatria" class="lazy" loading="lazy">
+          <h4>Geriatria</h4>
+          <p>Atendimento especializado para idosos, com foco na qualidade de vida e prevenção.</p>
+          <ul class="especialidade-detalhes">
+            <li>Avaliação geriátrica</li>
+            <li>Tratamento preventivo</li>
+            <li>Reabilitação</li>
+          </ul>
+        </div>
+
+        <div class="card-especialidade">
+          <img src="assets/psicologo.png" alt="Psicologia" class="lazy" loading="lazy">
+          <h4>Psicologia</h4>
+          <p>Acompanhamento psicológico para adultos, adolescentes e crianças.</p>
+          <ul class="especialidade-detalhes">
+            <li>Terapia individual</li>
+            <li>Terapia familiar</li>
+            <li>Orientação profissional</li>
+          </ul>
+        </div>
+
+        <div class="card-especialidade">
+          <img src="assets/fisioterapia.png" alt="Fisioterapia" class="lazy" loading="lazy">
+          <h4>Fisioterapia</h4>
+          <p>Reabilitação física e tratamento de lesões musculares e articulares.</p>
+          <ul class="especialidade-detalhes">
+            <li>Fisioterapia ortopédica</li>
+            <li>Reabilitação esportiva</li>
+            <li>RPG</li>
+          </ul>
+        </div>
+
+        <div class="card-especialidade">
+          <img src="assets/clinica.png" alt="Clínica Geral" class="lazy" loading="lazy">
+          <h4>Clínica Geral</h4>
+          <p>Atendimento inicial e acompanhamento contínuo da sua saúde.</p>
+          <ul class="especialidade-detalhes">
+            <li>Check-up completo</li>
+            <li>Exames de rotina</li>
+            <li>Prevenção</li>
+          </ul>
+        </div>
       </div>
 
       <div class="box-link-horarios">
@@ -90,36 +134,25 @@
     </section>
 
     <section id="contato" class="secao-contato container">
-      <div class="container-conteudo">
-        <h3>Contato</h3>
-        <p>Nossa clínica médica está aberto de <strong>segunda à sábado das 6:00 às 21:00</strong></p>
-        <p>Através do telefone/WhatsApp <strong>(11) 99966-5555</strong> você pode fazer o agendamento de consultas e
-          exames.</p>
-        <p>Estamos localizados: <strong> Av. Paulista, 3000 - São Paulo, SP.</strong>.</p>
-      </div>
+      <h3>Contato</h3>
+      <p>Estamos abertos de segunda a sábado das <strong>6:00 às 21:00</strong>. WhatsApp: <strong>(11) 99966-5555</strong></p>
 
-      <div class="container-rota">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.3840759236627!2d-46.66375300000001!3d-23.5546455!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce582c37b37421%3A0x5183c6f7df6032ca!2sAv.%20Paulista%2C%203000%20-%20Bela%20Vista%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2001310-300!5e0!3m2!1spt-BR!2sbr!4v1694468864578!5m2!1spt-BR!2sbr" width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy"referrerpolicy="no-referrer-when-downgrade"></iframe>
-      </div>
+      
     </section>
+
   </main>
 
-  <footer>
-    <div class="container">
-      <img class="topo-logo" src="assets/logo.png" alt="Clínica Médica" title="Clínica Médica Life">
-
-      <p>
-        Telefone e WhatsApp: (11) 99966-5555
-      </p>
-      <p>
-        Endereço: Av. Paulista, 3000 - São Paulo, SP.
-      </p>
-
-      <p>
-        ©2023 Clínica Médica Life - Todos os direitos reservados
-      </p>
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <img src="assets/logo.png" width="140" height="42" alt="CMLife">
+      <div>
+        <p>Telefone e WhatsApp: (11) 99966-5555</p>
+        <p>Av. Paulista, 3000 - São Paulo, SP</p>
+        <p>©2023 Clínica Médica Life - Todos os direitos reservados</p>
+      </div>
     </div>
   </footer>
-</body>
 
+  <script src="js/script.js" defer></script>
+</body>
 </html>
